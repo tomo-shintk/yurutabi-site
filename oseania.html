@@ -1,110 +1,76 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html>
 <head>
-<meta charset="utf-8" />
-<title>オセアニア観光マップ（日本中央・右側拡張）</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <title>オセアニア観光マップ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Leaflet CSS & JS -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!-- Leaflet CSS & JS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-<style>
-    html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    font-family: sans-serif;
-    }
-    h1 {
-    margin: 1rem 0;
-    font-size: 24px;
-    text-align: center;
-    }
+  <style>
     #map {
-    width: 100vw;
-    height: 80vh;
+      height: 90vh;
+      width: 100%;
     }
-    .popup-content {
-    font-size: 16px;
-    line-height: 1.5;
-    text-align: left;
-    }
-    .popup-title {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 5px;
-    display: block;
-    }
-</style>
+  </style>
 </head>
 <body>
-<h1>オセアニア観光マップ（日本中心・右側拡張）</h1>
-<div id="map"></div>
+  <h1>オセアニア観光マップ</h1>
+  <div id="map"></div>
 
-<script>
-    // 東側の経度制限を180→225に拡大
-    const worldBounds = [
-    [-90, -180],  // 南西端
-    [90, 225]     // 北東端（拡大）
-    ];
+  <script>
+    // 地図の初期表示位置（オーストラリア中央あたり）
+    const map = L.map('map').setView([-25.2744, 133.7751], 4);
 
-    const map = L.map('map', {
-    center: [36.0, 135.0],   // 日本中央
-    zoom: 2,
-    minZoom: 2,
-    maxBounds: worldBounds,  // 右側を拡大
-    maxBoundsViscosity: 1.0
-    });
-
+    // 地図の背景レイヤー
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors'
+      attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
 
-    // オセアニアの観光地
+    // 観光地データ（画像＋リンク付き）
     const locations = [
-    {
+      {
         name: "シドニー（オーストラリア）",
         lat: -33.8688,
         lng: 151.2093,
         image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Sydney_Opera_House_-_Dec_2008.jpg/320px-Sydney_Opera_House_-_Dec_2008.jpg",
         link: "https://ja.wikipedia.org/wiki/シドニー"
-    },
-    {
+      },
+      {
         name: "メルボルン（オーストラリア）",
         lat: -37.8136,
         lng: 144.9631,
         image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Melbourne_Skyline_and_Yarra_River.jpg/320px-Melbourne_Skyline_and_Yarra_River.jpg",
         link: "https://ja.wikipedia.org/wiki/メルボルン"
-    },
-    {
+      },
+      {
         name: "オークランド（ニュージーランド）",
         lat: -36.8485,
         lng: 174.7633,
         image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Auckland_City.jpg/320px-Auckland_City.jpg",
         link: "https://ja.wikipedia.org/wiki/オークランド"
-    },
-    {
-        name: "ナンディ（フィジー）",
+      },
+      {
+        name: "フィジー（ナンディ）",
         lat: -17.7766,
         lng: 177.4350,
         image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Nadi_airport.jpg/320px-Nadi_airport.jpg",
         link: "https://ja.wikipedia.org/wiki/フィジー"
-    }
+      }
     ];
 
+    // 各地にマーカーとポップアップを追加
     locations.forEach(loc => {
-    L.marker([loc.lat, loc.lng])
+      L.marker([loc.lat, loc.lng])
         .addTo(map)
         .bindPopup(`
-        <div class="popup-content">
-            <span class="popup-title">${loc.name}</span>
-            <img src="${loc.image}" width="200"><br>
-            <a href="${loc.link}" target="_blank">詳しく見る</a>
-        </div>
+          <strong>${loc.name}</strong><br>
+          <img src="${loc.image}" width="200"><br>
+          <a href="${loc.link}" target="_blank">詳しく見る</a>
         `);
     });
-</script>
+  </script>
 </body>
 </html>
