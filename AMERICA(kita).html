@@ -1,0 +1,58 @@
+  <!DOCTYPE html>
+  <html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>北アメリカ観光地図</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+      body {
+        margin: 0;
+        background-color: #e6f4fa; /* 北米の爽やかな空気感を表す淡い青色 */
+      }
+      #map {
+        height: 100vh;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .popup-img {
+        width: 240px;
+        aspect-ratio: 16 / 9; /* 16:9統一 */
+        object-fit: cover;
+        border-radius: 8px;
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const map = L.map('map', {
+      center: [40, -95],
+      zoom: 4,
+      minZoom: 3,
+      maxZoom: 8,
+      maxBounds: [[5, -170], [85, -30]],
+      maxBoundsViscosity: 1.0
+    });
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    const places = [
+      ["ナイアガラの滝（カナダ・アメリカ）", 43.0896, -79.0849, "https://i.ibb.co/Gv4bpyTg/pexels-photo-306381.jpg"],
+      ["ニューヨーク（アメリカ）", 40.7128, -74.0060, "https://i.ibb.co/JWRL0PqQ/pexels-photo-1239162.jpg"]
+    ];
+
+    places.forEach(p => {
+      const link = `https://www.google.com/maps?q=${encodeURIComponent(p[0])}`;
+      L.marker([p[1], p[2]]).addTo(map)
+        .bindPopup(`<b>${p[0]}</b><br><a href="${link}" target="_blank"><img src="${p[3]}" class="popup-img"></a>`);
+    });
+  </script>
+  </body>
+  </html>

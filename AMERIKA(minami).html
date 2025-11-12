@@ -1,0 +1,58 @@
+  <!DOCTYPE html>
+  <html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>南アメリカ観光地図</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+      body {
+        margin: 0;
+        background-color: #f2eee5; /* 南米の暖かみを感じる淡い土色 */
+      }
+      #map {
+        height: 100vh;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .popup-img {
+        width: 240px;
+        aspect-ratio: 16 / 9; /* 16:9統一 */
+        object-fit: cover;
+        border-radius: 8px;
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const map = L.map('map', {
+      center: [-15, -60],
+      zoom: 3.5,
+      minZoom: 3,
+      maxZoom: 8,
+      maxBounds: [[-60, -100], [20, -25]],
+      maxBoundsViscosity: 1.0
+    });
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    const places = [
+      ["マチュピチュ（ペルー）", -13.1631, -72.5450, "https://i.ibb.co/npLWskb/pexels-photo-2929906.jpg"],
+      ["リオデジャネイロ（ブラジル）", -22.9068, -43.1729, "https://i.ibb.co/dsmwsM86/pexels-photo-9435589.jpg"]
+    ];
+
+    places.forEach(p => {
+      const link = `https://www.google.com/maps?q=${encodeURIComponent(p[0])}`;
+      L.marker([p[1], p[2]]).addTo(map)
+        .bindPopup(`<b>${p[0]}</b><br><a href="${link}" target="_blank"><img src="${p[3]}" class="popup-img"></a>`);
+    });
+  </script>
+  </body>
+  </html>
