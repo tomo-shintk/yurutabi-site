@@ -1,0 +1,225 @@
+  <!DOCTYPE html>
+  <html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>モン・サン＝ミッシェル観光ガイド</title>
+    <style>
+      body {
+        font-family: "Hiragino Sans", "Noto Sans JP", sans-serif;
+        margin: 0;
+        background: linear-gradient(135deg, #dfe9f3, #f5efe6);
+        min-height: 100vh;
+        color: #333;
+      }
+
+      header {
+        text-align: center;
+        padding: 40px 20px;
+        background-color: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(8px);
+      }
+
+      header h1 {
+        font-size: 2.5em;
+        margin: 0;
+      }
+
+      .gallery {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 30px 10px;
+      }
+
+      .gallery-item {
+        text-align: center;
+      }
+
+      .gallery-item a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .gallery-item img {
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease;
+      }
+
+      .gallery-item img:hover {
+        transform: scale(1.05);
+      }
+
+      .gallery-item p {
+        margin-top: 8px;
+        font-weight: bold;
+      }
+
+      section {
+        background: #ffffff;
+        margin: 20px auto;
+        padding: 25px;
+        border-radius: 16px;
+        width: 85%;
+        max-width: 900px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      section h2 {
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+      }
+
+      .info-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin-top: 10px;
+      }
+
+      .info-text {
+        flex: 1;
+        min-width: 260px;
+      }
+
+      .info-text a.official-link {
+        display: inline-block;
+        margin-top: 6px;
+        color: #004a8f;
+        text-decoration: none;
+      }
+
+      .info-text a.official-link:hover {
+        text-decoration: underline;
+      }
+
+      .info-right {
+        text-align: right;
+        min-width: 180px;
+      }
+
+      .rating {
+        font-size: 1.2em;
+        color: #fbc02d;
+        margin-bottom: 10px;
+      }
+
+      .map-link {
+        display: inline-block;
+        text-decoration: none;
+        background: #4a90e2;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 8px;
+        transition: background 0.3s;
+      }
+
+      .map-link:hover {
+        background: #357ab8;
+      }
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <h1>モン・サン＝ミッシェル観光ガイド</h1>
+      <p>潮の満ち引きとともに姿を変える神秘の世界遺産へ</p>
+    </header>
+
+    <div class="gallery">
+      <div class="gallery-item">
+        <a href="https://www.google.com/maps?q=エトルタ" target="_blank">
+          <img src="https://i.ibb.co/vxJgHvnz/pexels-photo-17928366.jpg" alt="エトルタの断崖">
+        </a>
+        <p>エトルタ</p>
+      </div>
+      <div class="gallery-item">
+        <a href="https://www.google.com/maps?q=モン・サン＝ミッシェル" target="_blank">
+          <img src="https://i.ibb.co/V0XsSsT6/pexels-photo-19370396.jpg" alt="モン・サン＝ミッシェル全景">
+        </a>
+        <p>モン・サン＝ミッシェル</p>
+      </div>
+      <div class="gallery-item">
+        <a href="https://www.google.com/maps?q=ドーヴィル" target="_blank">
+          <img src="https://i.ibb.co/MkB5r9pV/pexels-photo-27575895.jpg" alt="ドーヴィルの街並み">
+        </a>
+        <p>ドーヴィル</p>
+      </div>
+      <div class="gallery-item">
+        <a href="https://www.google.com/maps?q=オンフルール" target="_blank">
+          <img src="https://i.ibb.co/k2GS7QcC/pexels-photo-30670032.jpg" alt="オンフルール港">
+        </a>
+        <p>オンフルール</p>
+      </div>
+    </div>
+
+    <section>
+      <h2>近場のホテル</h2>
+      <div class="info-container">
+        <div class="info-text">
+          <p><strong>La Mère Poulard</strong><br>
+          モン・サン＝ミッシェル内にある老舗ホテル兼レストラン。<br>
+          名物オムレツでも有名です。<br>
+          <a href="https://www.lamerepoulard.com/" target="_blank" class="official-link">🔗 公式サイトを見る</a></p>
+        </div>
+        <div class="info-right">
+          <div class="rating">⭐⭐⭐（3.7 / 5）</div>
+          <a href="https://www.google.com/maps?q=La+Mère+Poulard+Mont+Saint+Michel" target="_blank" class="map-link">📍 地図で見る</a>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="info-container">
+        <div class="info-text">
+          <p><strong>Le Relais Saint-Michel</strong><br>
+          対岸に位置する絶景ホテル。<br>
+          部屋やレストランからモン・サン＝ミッシェルを一望できます。<br>
+          <a href="https://www.relais-st-michel.fr/" target="_blank" class="official-link">🔗 公式サイトを見る</a></p>
+        </div>
+        <div class="info-right">
+          <div class="rating">⭐⭐⭐⭐（4.1 / 5）</div>
+          <a href="https://www.google.com/maps?q=Le+Relais+Saint-Michel" target="_blank" class="map-link">📍 地図で見る</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>近場のおいしいレストラン</h2>
+      <div class="info-container">
+        <div class="info-text">
+          <p><strong>La Mère Poulard Restaurant</strong><br>
+          名物ふわふわオムレツを味わえる伝統レストラン。<br>
+          世界中の観光客に愛される人気店です。<br>
+          <a href="https://www.lamerepoulard.com/restaurant" target="_blank" class="official-link">🔗 公式サイトを見る</a></p>
+        </div>
+        <div class="info-right">
+          <div class="rating">⭐⭐⭐（3.7 / 5）</div>
+          <a href="https://www.google.com/maps?q=La+Mère+Poulard+Restaurant" target="_blank" class="map-link">📍 地図で見る</a>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="info-container">
+        <div class="info-text">
+          <p><strong>Le Pré Salé</strong><br>
+          対岸にあるラム料理の名店。<br>
+          美しい景観とともに落ち着いた雰囲気の中で食事を楽しめます。<br>
+          <a href="https://www.lepresale.com/" target="_blank" class="official-link">🔗 公式サイトを見る</a></p>
+        </div>
+        <div class="info-right">
+          <div class="rating">⭐⭐⭐⭐（4.0 / 5）</div>
+          <a href="https://www.google.com/maps?q=Le+Pré+Salé+Mont+Saint+Michel" target="_blank" class="map-link">📍 地図で見る</a>
+        </div>
+      </div>
+    </section>
+
+  </body>
+  </html>

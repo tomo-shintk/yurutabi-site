@@ -1,0 +1,203 @@
+  <!DOCTYPE html>
+  <html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ヴェネツィア観光ガイド</title>
+    <style>
+      body {
+        font-family: "Hiragino Sans", "Noto Sans JP", sans-serif;
+        margin: 0;
+        background: linear-gradient(135deg, #c1e3f3, #eaf9ff);
+        color: #333;
+      }
+
+      header {
+        text-align: center;
+        padding: 40px 20px;
+        background-color: rgba(255,255,255,0.85);
+        backdrop-filter: blur(8px);
+      }
+
+      header h1 {
+        font-size: 2.4em;
+        margin-bottom: 8px;
+      }
+
+      .gallery {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 30px 15px;
+      }
+
+      .gallery-item {
+        text-align: center;
+      }
+
+      .gallery-item img {
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        transition: transform 0.3s;
+      }
+
+      .gallery-item img:hover {
+        transform: scale(1.05);
+      }
+
+      .gallery-item p {
+        margin-top: 8px;
+        font-weight: bold;
+      }
+
+      section {
+        background: white;
+        margin: 30px auto;
+        padding: 25px;
+        border-radius: 16px;
+        width: 85%;
+        max-width: 900px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      }
+
+      section h2 {
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        font-size: 1.4em;
+      }
+
+      .info-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 10px;
+      }
+
+      .info-text {
+        flex: 1;
+        min-width: 250px;
+      }
+
+      .info-right {
+        text-align: right;
+        min-width: 180px;
+      }
+
+      .rating {
+        font-size: 1.2em;
+        color: #fbc02d;
+        margin-bottom: 10px;
+      }
+
+      .map-link {
+        display: inline-block;
+        text-decoration: none;
+        background: #4a90e2;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 8px;
+        transition: background 0.3s;
+      }
+
+      .map-link:hover {
+        background: #357ab8;
+      }
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <h1>ヴェネツィア観光ガイド</h1>
+      <p>水の都で楽しむ、芸術と歴史の街歩き</p>
+    </header>
+
+    <div class="gallery">
+      <div class="gallery-item">
+        <a href="https://www.google.com/maps?q=ヴェネツィアの運河" target="_blank">
+          <img src="https://i.ibb.co/G4HQVLRx/pexels-photo-20053240.jpg" alt="ヴェネツィアの運河">
+        </a>
+        <p>ヴェネツィアの運河</p>
+      </div>
+
+      <div class="gallery-item">
+        <a href="https://www.google.com/maps?q=サン・マルコ広場" target="_blank">
+          <img src="https://i.ibb.co/jvTZfc10/pexels-photo-15596166.jpg" alt="サン・マルコ広場">
+        </a>
+        <p>サン・マルコ広場</p>
+      </div>
+
+      <div class="gallery-item">
+        <a href="https://www.google.com/maps?q=リアルト橋" target="_blank">
+          <img src="https://i.ibb.co/Wvk6Bh9M/pexels-photo-2031767.jpg" alt="リアルト橋">
+        </a>
+        <p>リアルト橋</p>
+      </div>
+
+      <div class="gallery-item">
+        <a href="https://www.google.com/maps?q=ドゥカーレ宮殿" target="_blank">
+          <img src="https://i.ibb.co/WWrBV18W/pexels-photo-11370223.jpg" alt="ドゥカーレ宮殿">
+        </a>
+        <p>ドゥカーレ宮殿</p>
+      </div>
+    </div>
+
+    <section>
+      <h2>近場のホテル</h2>
+      <div class="info-container">
+        <div class="info-text">
+          <p><strong>Hotel Danieli</strong><br>
+          ヴェネツィアを代表する豪華ホテル。運河沿いに位置し、歴史と格式を感じる内装が魅力です。</p>
+        </div>
+        <div class="info-right">
+          <div class="rating">⭐⭐⭐⭐（4.5 / 5）</div>
+          <a href="https://www.google.com/maps?q=Hotel+Danieli+Venice" target="_blank" class="map-link">📍 地図で見る</a>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="info-container">
+        <div class="info-text">
+          <p><strong>Gritti Palace</strong><br>
+          グランドカナル沿いに位置する高級ホテル。伝統的なインテリアと最高の眺めを誇ります。</p>
+        </div>
+        <div class="info-right">
+          <div class="rating">⭐⭐⭐⭐⭐（4.6 / 5）</div>
+          <a href="https://www.google.com/maps?q=The+Gritti+Palace+Venice" target="_blank" class="map-link">📍 地図で見る</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>近場のおいしいレストラン</h2>
+      <div class="info-container">
+        <div class="info-text">
+          <p><strong>Ristorante Quadri</strong><br>
+          サン・マルコ広場を望む一流レストラン。伝統とモダンを融合したイタリアンを提供。</p>
+        </div>
+        <div class="info-right">
+          <div class="rating">⭐⭐⭐（3.7 / 5）</div>
+          <a href="https://www.google.com/maps?q=Ristorante+Quadri+Venice" target="_blank" class="map-link">📍 地図で見る</a>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="info-container">
+        <div class="info-text">
+          <p><strong>Osteria alle Testiere</strong><br>
+          新鮮な魚介とワインが評判の小さな名店。予約必須の人気レストランです。</p>
+        </div>
+        <div class="info-right">
+          <div class="rating">⭐⭐⭐⭐（4.4 / 5）</div>
+          <a href="https://www.google.com/maps?q=Osteria+alle+Testiere+Venice" target="_blank" class="map-link">📍 地図で見る</a>
+        </div>
+      </div>
+    </section>
+
+  </body>
+  </html>

@@ -1,0 +1,225 @@
+  <!DOCTYPE html>
+  <html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サグラダ・ファミリア観光ガイド</title>
+    <style>
+      body {
+        font-family: "Hiragino Sans", "Noto Sans JP", sans-serif;
+        margin: 0;
+        background: linear-gradient(135deg, #fff4e3, #dff3f8);
+        min-height: 100vh;
+        color: #333;
+      }
+
+      header {
+        text-align: center;
+        padding: 40px 20px;
+        background-color: rgba(255,255,255,0.85);
+        backdrop-filter: blur(8px);
+      }
+
+      header h1 {
+        font-size: 2.5em;
+        margin: 0;
+      }
+
+      .gallery {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 30px 10px;
+      }
+
+      .gallery-item {
+        text-align: center;
+      }
+
+      .gallery-item img {
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease;
+      }
+
+      .gallery-item img:hover {
+        transform: scale(1.05);
+      }
+
+      .gallery-item p {
+        margin-top: 8px;
+        font-weight: bold;
+      }
+
+      section {
+        background: #ffffff;
+        margin: 20px auto;
+        padding: 25px;
+        border-radius: 16px;
+        width: 85%;
+        max-width: 900px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      section h2 {
+        border-left: 5px solid #ff7043;
+        padding-left: 10px;
+      }
+
+      .info-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin-top: 10px;
+      }
+
+      .info-text {
+        flex: 1;
+        min-width: 260px;
+      }
+
+      .info-text a.official-link {
+        display: inline-block;
+        margin-top: 6px;
+        color: #d84315;
+        text-decoration: none;
+      }
+
+      .info-text a.official-link:hover {
+        text-decoration: underline;
+      }
+
+      .info-right {
+        text-align: right;
+        min-width: 180px;
+      }
+
+      .rating {
+        font-size: 1.2em;
+        color: #fbc02d;
+        margin-bottom: 10px;
+      }
+
+      .map-link {
+        display: inline-block;
+        text-decoration: none;
+        background: #ff7043;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 8px;
+        transition: background 0.3s;
+      }
+
+      .map-link:hover {
+        background: #e64a19;
+      }
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <h1>サグラダ・ファミリア観光ガイド</h1>
+      <p>ガウディが遺した、今も建設が続く奇跡の教会</p>
+    </header>
+
+    <div class="gallery">
+      <div class="gallery-item">
+        <a href="https://www.google.com/maps?q=Sagrada+Familia+Barcelona" target="_blank">
+          <img src="https://i.ibb.co/VYYBQ95z/pexels-photo-998735.jpg" alt="サグラダ・ファミリア">
+        </a>
+        <p>サグラダ・ファミリア</p>
+      </div>
+
+      <div class="gallery-item">
+        <a href="https://www.google.com/maps?q=Park+Guell+Barcelona" target="_blank">
+          <img src="https://i.ibb.co/9HMXwxQW/pexels-photo-27348503.jpg" alt="グエル公園">
+        </a>
+        <p>グエル公園</p>
+      </div>
+
+      <div class="gallery-item">
+        <a href="https://www.google.com/maps?q=Madrid+Spain" target="_blank">
+          <img src="https://i.ibb.co/kgQJ6fFs/pexels-photo-930595.jpg" alt="マドリード">
+        </a>
+        <p>マドリード</p>
+      </div>
+
+      <div class="gallery-item">
+        <a href="https://www.google.com/maps?q=Hospital+de+Sant+Pau+Barcelona" target="_blank">
+          <img src="https://i.ibb.co/KxT4zTw2/pexels-photo-6233438.jpg" alt="サン パウ病院">
+        </a>
+        <p>サン パウ病院</p>
+      </div>
+    </div>
+
+    <section>
+      <h2>近場のホテル</h2>
+
+      <div class="info-container">
+        <div class="info-text">
+          <p><strong>Hotel Sagrada Familia</strong><br>
+          サグラダ・ファミリアから徒歩数分。<br>
+          清潔で快適な客室が人気の中価格帯ホテルです。<br>
+          <a href="https://www.hotelsagradafamilia.com/" target="_blank" class="official-link">🔗 公式サイトを見る</a></p>
+        </div>
+        <div class="info-right">
+          <div class="rating">⭐⭐⭐⭐（4.1 / 5）</div>
+          <a href="https://www.google.com/maps?q=Hotel+Sagrada+Familia+Barcelona" target="_blank" class="map-link">📍 地図で見る</a>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="info-container">
+        <div class="info-text">
+          <p><strong>Ayre Hotel Rosellón</strong><br>
+          サグラダ・ファミリアを望む屋上テラスが人気のホテル。<br>
+          絶景を見ながらの朝食が魅力です。<br>
+          <a href="https://www.ayrehoteles.com/en/hotels/ayre-hotel-rosellon/" target="_blank" class="official-link">🔗 公式サイトを見る</a></p>
+        </div>
+        <div class="info-right">
+          <div class="rating">⭐⭐⭐⭐（4.2 / 5）</div>
+          <a href="https://www.google.com/maps?q=Ayre+Hotel+Rosellón" target="_blank" class="map-link">📍 地図で見る</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>近場のおいしいレストラン</h2>
+
+      <div class="info-container">
+        <div class="info-text">
+          <p><strong>La Paradeta Sagrada Familia</strong><br>
+          新鮮な魚介をその場で選び、調理してもらえる人気シーフード店。<br>
+          手頃な価格とカジュアルな雰囲気が魅力です。<br>
+          <a href="https://laparadeta.com/en/" target="_blank" class="official-link">🔗 公式サイトを見る</a></p>
+        </div>
+        <div class="info-right">
+          <div class="rating">⭐⭐⭐⭐（4.4 / 5）</div>
+          <a href="https://www.google.com/maps?q=La+Paradeta+Sagrada+Familia" target="_blank" class="map-link">📍 地図で見る</a>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="info-container">
+        <div class="info-text">
+          <p><strong>Restaurante Singular</strong><br>
+          地元バルセロナ料理をモダンにアレンジ。<br>
+          サグラダ・ファミリアから徒歩圏内にある隠れ家的レストランです。<br>
+          <a href="https://www.restaurantesingular.com/" target="_blank" class="official-link">🔗 公式サイトを見る</a></p>
+        </div>
+        <div class="info-right">
+          <div class="rating">⭐⭐⭐⭐⭐（4.7 / 5）</div>
+          <a href="https://www.google.com/maps?q=Restaurante+Singular+Barcelona" target="_blank" class="map-link">📍 地図で見る</a>
+        </div>
+      </div>
+    </section>
+
+  </body>
+  </html>

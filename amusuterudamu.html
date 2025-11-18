@@ -1,0 +1,245 @@
+  <!DOCTYPE html>
+  <html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>アムステルダム観光ガイド</title>
+    <style>
+      :root{
+        --accent:#e07a2e;
+        --bg-start:#f8f4ef;
+        --bg-end:#e7f0f7;
+        --text:#333;
+        --card-bg:#ffffff;
+        --card-shadow: rgba(0,0,0,0.08);
+        --map-btn:#e07a2e;
+      }
+
+      *{box-sizing:border-box}
+      body{
+        margin:0;
+        font-family:"Hiragino Sans","Noto Sans JP",sans-serif;
+        color:var(--text);
+        background: linear-gradient(180deg,var(--bg-start) 0%, var(--bg-end) 100%);
+        line-height:1.6;
+      }
+
+      header{
+        background:var(--accent);
+        color:#fff;
+        padding:28px 16px;
+        text-align:center;
+      }
+      header h1{margin:0;font-size:1.6rem}
+      header p{margin:8px 0 0; font-size:0.95rem; opacity:0.95}
+
+      main{max-width:1100px;margin:22px auto;padding:0 16px}
+
+      section{
+        background:var(--card-bg);
+        border-radius:12px;
+        padding:20px;
+        box-shadow:0 6px 18px var(--card-shadow);
+        margin-bottom:20px;
+      }
+
+      h2{
+        margin:0 0 12px 0;
+        padding-left:10px;
+        border-left:5px solid var(--accent);
+        font-size:1.05rem;
+      }
+
+      .gallery{
+        display:grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap:16px;
+        align-items:start;
+        justify-items:center;
+        padding:8px 4px;
+      }
+
+      @media (max-width:980px){
+        .gallery{ grid-template-columns: repeat(2, 1fr); }
+      }
+      @media (max-width:560px){
+        .gallery{ grid-template-columns: 1fr; }
+      }
+
+      .gallery-item{
+        width:100%;
+        max-width: 300px;
+        text-align:center;
+      }
+
+      .thumb {
+        width:100%;
+        aspect-ratio: 16 / 9;
+        border-radius:10px;
+        overflow:hidden;
+        display:block;
+        background:#f0f4f7;
+        box-shadow:0 4px 12px rgba(0,0,0,0.08);
+        transition: transform .22s ease, box-shadow .22s ease;
+        text-decoration:none;
+      }
+      .thumb img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        display:block;
+      }
+      .thumb:hover{ transform:scale(1.03); box-shadow:0 8px 20px rgba(0,0,0,0.12); }
+
+      .caption{
+        margin-top:10px;
+        font-weight:700;
+        color:var(--text);
+        font-size:0.98rem;
+      }
+      .caption small{
+        font-weight:400;
+        font-size:0.85rem;
+        color:#666;
+      }
+
+      .card-list{display:grid;gap:14px;margin-top:12px}
+      .card{
+        position:relative;
+        padding:16px;
+        border-radius:10px;
+        background:var(--card-bg);
+        box-shadow:0 6px 14px var(--card-shadow);
+        display:flex;
+        justify-content:space-between;
+        gap:12px;
+        align-items:flex-start;
+        flex-wrap:wrap;
+      }
+      .card .left{flex:1;min-width:220px}
+      .card .left strong{display:block;margin-bottom:6px}
+      .official-link{display:inline-block;margin-top:8px;color:var(--accent);text-decoration:none}
+      .official-link:hover{text-decoration:underline}
+
+      .card .right{min-width:150px;text-align:right}
+      .rating{color:#e6b800;font-weight:700;margin-bottom:8px}
+      .map-link{
+        display:inline-block;
+        background:var(--map-btn);
+        color:#fff;
+        padding:8px 12px;
+        border-radius:8px;
+        text-decoration:none;
+      }
+      .map-link:hover{opacity:.94}
+
+      @media (max-width:760px){
+        .card{flex-direction:column;align-items:stretch}
+        .card .right{text-align:left;margin-top:10px}
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>アムステルダム観光ガイド</h1>
+      <p>運河、レンガの家並み、自転車文化——オランダの魅力を歩いて感じる</p>
+    </header>
+
+    <main>
+      <section aria-labelledby="gallery-title">
+        <h2 id="gallery-title">📸 写真ギャラリー</h2>
+
+        <div class="gallery">
+          <div class="gallery-item">
+            <a class="thumb" href="https://www.google.com/maps?q=Amsterdam+Canal" target="_blank" rel="noopener">
+              <img src="https://i.ibb.co/j9VTFrns/pexels-photo-29351196.jpg" alt="アムステルダム運河">
+            </a>
+            <div class="caption">アムステルダム運河</div>
+          </div>
+
+          <div class="gallery-item">
+            <a class="thumb" href="https://www.google.com/maps?q=Rijksmuseum+Amsterdam" target="_blank" rel="noopener">
+              <img src="https://i.ibb.co/sdMYKMVQ/pexels-photo-208733.jpg" alt="ライクスミュージアム（国立美術館）">
+            </a>
+            <div class="caption">
+              ライクスミュージアム<br>
+              <small>（国立美術館）</small>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <a class="thumb" href="https://www.google.com/maps?q=Zaanse+Schans" target="_blank" rel="noopener">
+              <img src="https://i.ibb.co/93rP3nhW/pexels-photo-20648367.jpg" alt="ザーンセ・スカンスの風車村">
+            </a>
+            <div class="caption">ザーンセ・スカンスの風車村</div>
+          </div>
+
+          <div class="gallery-item">
+            <a class="thumb" href="https://www.google.com/maps?q=Amsterdam+City" target="_blank" rel="noopener">
+              <img src="https://i.ibb.co/BVVn2bmC/pexels-photo-34633499.jpg" alt="アムステルダムの街並み">
+            </a>
+            <div class="caption">アムステルダムの街並み</div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>🏨 近場のホテル</h2>
+        <div class="card-list">
+          <div class="card">
+            <div class="left">
+              <strong>Hotel De L’Europe Amsterdam</strong>
+              運河沿いの5つ星ホテル。美しいインテリアと上質なサービスで知られる。
+              <a class="official-link" href="https://www.deleurope.com/" target="_blank" rel="noopener">公式サイトを見る</a>
+            </div>
+            <div class="right">
+              <div class="rating">⭐⭐⭐⭐⭐（4.6 / 5）</div>
+              <a class="map-link" href="https://www.google.com/maps?q=Hotel+De+L%27Europe+Amsterdam" target="_blank" rel="noopener">📍 地図で見る</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="left">
+              <strong>INK Hotel Amsterdam - MGallery</strong>
+              旧郵便局をリノベーションしたデザインホテル。主要観光地へ徒歩圏内。
+              <a class="official-link" href="https://www.inkhotels.com/" target="_blank" rel="noopener">公式サイトを見る</a>
+            </div>
+            <div class="right">
+              <div class="rating">⭐⭐⭐⭐（4.6 / 5）</div>
+              <a class="map-link" href="https://www.google.com/maps?q=INK+Hotel+Amsterdam+MGallery" target="_blank" rel="noopener">📍 地図で見る</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>🍽️ 近場のおいしいレストラン</h2>
+        <div class="card-list">
+          <div class="card">
+            <div class="left">
+              <strong>Restaurant De Kas</strong>
+              温室併設のレストランで、自家栽培の野菜を使った季節料理を提供。
+              <a class="official-link" href="https://www.restaurantdekas.com/" target="_blank" rel="noopener">公式サイトを見る</a>
+            </div>
+            <div class="right">
+              <div class="rating">⭐⭐⭐⭐⭐（4.7 / 5）</div>
+              <a class="map-link" href="https://www.google.com/maps?q=Restaurant+De+Kas" target="_blank" rel="noopener">📍 地図で見る</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="left">
+              <strong>The Pancake Bakery</strong>
+              ダッチパンケーキの老舗。観光客にも地元民にも愛される味。
+              <a class="official-link" href="https://pancake.nl/" target="_blank" rel="noopener">公式サイトを見る</a>
+            </div>
+            <div class="right">
+              <div class="rating">⭐⭐⭐⭐（4.3 / 5）</div>
+              <a class="map-link" href="https://www.google.com/maps?q=The+Pancake+Bakery+Amsterdam" target="_blank" rel="noopener">📍 地図で見る</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  </html>
