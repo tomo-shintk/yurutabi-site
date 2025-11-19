@@ -26,6 +26,7 @@
     </style>
   </head>
   <body>
+
   <div id="map"></div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -43,16 +44,23 @@
       attribution: '© OpenStreetMap contributors'
     }).addTo(map);
 
+    // 観光地データ（最後の要素が遷移先ファイル名）
     const places = [
-      ["ピラミッド（エジプト）", 29.9792, 31.1342, "https://i.ibb.co/B2y3R45N/pexels-photo-71241.jpg"],
-      ["ケープタウン（南アフリカ）", -33.9249, 18.4241, "https://i.ibb.co/DHcy9m5T/pexels-photo-259447.jpg"]
+      ["ピラミッド（エジプト）", 29.9792, 31.1342, "https://i.ibb.co/B2y3R45N/pexels-photo-71241.jpg", "piramido.html"],
+      ["ケープタウン（南アフリカ）", -33.9249, 18.4241, "https://i.ibb.co/DHcy9m5T/pexels-photo-259447.jpg", "ke-putaun.html"]
     ];
 
-    places.forEach(p => {
-      const link = `https://www.google.com/maps?q=${encodeURIComponent(p[0])}`;
-      L.marker([p[1], p[2]]).addTo(map)
-        .bindPopup(`<b>${p[0]}</b><br><a href="${link}" target="_blank"><img src="${p[3]}" class="popup-img"></a>`);
+    places.forEach(place => {
+      const link = `https://tomo-shintk.github.io/yurutabi-site/${place[4]}`;
+      L.marker([place[1], place[2]]).addTo(map)
+        .bindPopup(`
+          <b>${place[0]}</b><br>
+          <a href="${link}" target="_blank" rel="noopener">
+            <img src="${place[3]}" class="popup-img" alt="${place[0]}">
+          </a>
+        `);
     });
   </script>
+
   </body>
   </html>
