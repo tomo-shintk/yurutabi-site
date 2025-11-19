@@ -1,76 +1,72 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8" />
-  <title>オセアニア観光マップ</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="utf-8" />
+    <title>オセアニア観光マップ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Leaflet CSS & JS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Leaflet CSS & JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-  <style>
-    #map {
-      height: 90vh;
-      width: 100%;
-    }
-  </style>
-</head>
-<body>
-  <h1>オセアニア観光マップ</h1>
-  <div id="map"></div>
-
-  <script>
-    // 地図の初期表示位置（オーストラリア中央あたり）
-    const map = L.map('map').setView([-25.2744, 133.7751], 4);
-
-    // 地図の背景レイヤー
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(map);
-
-    // 観光地データ（画像＋リンク付き）
-    const locations = [
-      {
-        name: "シドニー（オーストラリア）",
-        lat: -33.8688,
-        lng: 151.2093,
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Sydney_Opera_House_-_Dec_2008.jpg/320px-Sydney_Opera_House_-_Dec_2008.jpg",
-        link: "https://ja.wikipedia.org/wiki/シドニー"
-      },
-      {
-        name: "メルボルン（オーストラリア）",
-        lat: -37.8136,
-        lng: 144.9631,
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Melbourne_Skyline_and_Yarra_River.jpg/320px-Melbourne_Skyline_and_Yarra_River.jpg",
-        link: "https://ja.wikipedia.org/wiki/メルボルン"
-      },
-      {
-        name: "オークランド（ニュージーランド）",
-        lat: -36.8485,
-        lng: 174.7633,
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Auckland_City.jpg/320px-Auckland_City.jpg",
-        link: "https://ja.wikipedia.org/wiki/オークランド"
-      },
-      {
-        name: "フィジー（ナンディ）",
-        lat: -17.7766,
-        lng: 177.4350,
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Nadi_airport.jpg/320px-Nadi_airport.jpg",
-        link: "https://ja.wikipedia.org/wiki/フィジー"
+    <style>
+      body {
+        font-family: "Hiragino Sans", "Noto Sans JP", sans-serif;
+        margin: 0;
+        background: #e6f6ff;
+        text-align: center;
       }
-    ];
+      h1 {
+        margin: 10px;
+      }
+      #map {
+        height: 90vh;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🌏 オセアニア観光マップ</h1>
+    <div id="map"></div>
 
-    // 各地にマーカーとポップアップを追加
-    locations.forEach(loc => {
-      L.marker([loc.lat, loc.lng])
-        .addTo(map)
-        .bindPopup(`
-          <strong>${loc.name}</strong><br>
-          <img src="${loc.image}" width="200"><br>
-          <a href="${loc.link}" target="_blank">詳しく見る</a>
-        `);
-    });
-  </script>
-</body>
-</html>
+    <script>
+      // 地図の初期表示位置（オーストラリア中央）
+      const map = L.map('map').setView([-25.2744, 133.7751], 4);
+
+      // 背景マップ
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+      }).addTo(map);
+
+      // 観光地データ（画像のみクリックで遷移）
+      const locations = [
+        {
+          name: "シドニー（オーストラリア）",
+          lat: -33.8688,
+          lng: 151.2093,
+          image: "https://i.ibb.co/ymXRgVCw/pexels-ben-mack-5707602.jpg",
+          link: "https://tomo-shintk.github.io/yurutabi-site/sidoni.html"
+        },
+        {
+          name: "メルボルン（オーストラリア）",
+          lat: -37.8136,
+          lng: 144.9631,
+          image: "https://i.ibb.co/KT5tWt1/pexels-nick-english-677917283-18198178.jpg",
+          link: "https://tomo-shintk.github.io/yurutabi-site/meruborun.html"
+        }
+      ];
+
+      // マーカー & ポップアップ作成（画像クリック専用）
+      locations.forEach(loc => {
+        L.marker([loc.lat, loc.lng])
+          .addTo(map)
+          .bindPopup(`
+            <strong>${loc.name}</strong><br>
+            <a href="${loc.link}" target="_blank">
+              <img src="${loc.image}" width="200">
+            </a>
+          `);
+      });
+    </script>
+  </body>
+  </html>
