@@ -1,0 +1,191 @@
+  <!DOCTYPE html>
+  <html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>マチュピチュ観光ガイド</title>
+    <style>
+      body {
+        font-family: "Hiragino Sans", "Noto Sans JP", sans-serif;
+        margin: 0;
+        background: linear-gradient(135deg, #d8f0ff, #ffffff);
+        min-height: 100vh;
+        color: #333;
+      }
+      header {
+        text-align: center;
+        padding: 40px 20px;
+        background-color: rgba(255,255,255,0.85);
+        backdrop-filter: blur(8px);
+      }
+      header h1 {
+        font-size: 2.5em;
+        margin: 0;
+      }
+      .gallery {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 30px 10px;
+      }
+      .gallery-item {
+        text-align: center;
+      }
+      .gallery-item a {
+        text-decoration: none;
+        color: inherit;
+      }
+      .gallery-item img {
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        transition: transform 0.3s ease;
+      }
+      .gallery-item img:hover {
+        transform: scale(1.05);
+      }
+      .gallery-item p {
+        margin-top: 8px;
+        font-weight: bold;
+      }
+      section {
+        background: white;
+        margin: 20px auto;
+        padding: 25px;
+        border-radius: 16px;
+        width: 85%;
+        max-width: 900px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      }
+      section h2 {
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+      }
+      .info-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin-top: 10px;
+      }
+      .info-text {
+        flex: 1;
+        min-width: 260px;
+      }
+      .info-text a.official-link {
+        display: inline-block;
+        margin-top: 6px;
+        color: #005b96;
+        text-decoration: none;
+      }
+      .info-text a.official-link:hover {
+        text-decoration: underline;
+      }
+      .info-right {
+        text-align: right;
+        min-width: 180px;
+      }
+      .rating {
+        font-size: 1.2em;
+        color: #fbc02d;
+        margin-bottom: 10px;
+      }
+      .map-link {
+        display: inline-block;
+        text-decoration: none;
+        background: #4a90e2;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 8px;
+        transition: background 0.3s;
+      }
+      .map-link:hover {
+        background: #357ab8;
+      }
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <h1>マチュピチュ観光ガイド</h1>
+      <p>天空の古代都市——ペルー・マチュピチュを巡る旅</p>
+    </header>
+
+    <div class="gallery">
+      <div class="gallery-item">
+        <a href="https://www.google.com/maps?q=Machu+Picchu" target="_blank">
+          <img src="https://i.ibb.co/ym4G6ZhC/pexels-photo-2929906.jpg" alt="マチュピチュ全景">
+        </a>
+        <p>マチュピチュ全景</p>
+      </div>
+      <div class="gallery-item">
+        <a href="https://www.google.com/maps?q=Huayna+Picchu" target="_blank">
+          <img src="https://i.ibb.co/RG58YtTc/pexels-sergei-a-1322276-2539417.jpg" alt="ワイナピチュ山">
+        </a>
+        <p>ワイナピチュ山</p>
+      </div>
+    </div>
+
+    <section>
+      <h2>近場のホテル</h2>
+      <div class="info-container">
+        <div class="info-text">
+          <p><strong>Belmond Sanctuary Lodge</strong><br>
+          マチュピチュ遺跡の目の前に位置する高級ホテル。最高の景観と便利な立地が魅力。<br>
+          <a href="https://www.belmond.com/hotels/south-america/peru/machu-picchu/belmond-sanctuary-lodge/" target="_blank" class="official-link">🔗 公式サイトを見る</a></p>
+        </div>
+        <div class="info-right">
+          <div class="rating">⭐⭐⭐⭐⭐（4.7 / 5）</div>
+          <a href="https://www.google.com/maps?q=Belmond+Sanctuary+Lodge" target="_blank" class="map-link">📍 地図で見る</a>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="info-container">
+        <div class="info-text">
+          <p><strong>Inkaterra Machu Picchu Pueblo Hotel</strong><br>
+          熱帯の庭園に囲まれたリゾートホテル。自然と文化を満喫できる快適な宿泊施設。<br>
+          <a href="https://www.inkaterra.com/inkaterra-machu-picchu-pueblo-hotel/" target="_blank" class="official-link">🔗 公式サイトを見る</a></p>
+        </div>
+        <div class="info-right">
+          <div class="rating">⭐⭐⭐⭐（4.5 / 5）</div>
+          <a href="https://www.google.com/maps?q=Inkaterra+Machu+Picchu+Pueblo+Hotel" target="_blank" class="map-link">📍 地図で見る</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>近場のおいしいレストラン</h2>
+      <div class="info-container">
+        <div class="info-text">
+          <p><strong>Map Cafe</strong><br>
+          遺跡近くのカフェ。軽食や飲み物を楽しみながら、マチュピチュの景色を満喫できます。<br>
+          <a href="https://www.tripadvisor.com/Restaurant_Review-g304308-d1554265-Reviews-Map_Cafe-Machu_Picchu_Cusco_Region.html" target="_blank" class="official-link">🔗 公式サイトを見る</a></p>
+        </div>
+        <div class="info-right">
+          <div class="rating">⭐⭐⭐⭐（4.4 / 5）</div>
+          <a href="https://www.google.com/maps?q=Map+Cafe+Machu+Picchu" target="_blank" class="map-link">📍 地図で見る</a>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="info-container">
+        <div class="info-text">
+          <p><strong>Café Inkaterra</strong><br>
+          Inkaterraホテル内のカフェ。地元食材を使った軽食が人気。<br>
+          <a href="https://www.inkaterra.com/inkaterra-machu-picchu-pueblo-hotel/dining/cafe-inkaterra/" target="_blank" class="official-link">🔗 公式サイトを見る</a></p>
+        </div>
+        <div class="info-right">
+          <div class="rating">⭐⭐⭐⭐（4.1 / 5）</div>
+          <a href="https://www.google.com/maps?q=Cafe+Inkaterra+Machu+Picchu" target="_blank" class="map-link">📍 地図で見る</a>
+        </div>
+      </div>
+    </section>
+
+  </body>
+  </html>

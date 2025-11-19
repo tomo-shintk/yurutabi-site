@@ -1,0 +1,122 @@
+  <!DOCTYPE html>
+  <html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ピラミッド観光ガイド</title>
+    <style>
+      body {font-family:"Hiragino Sans","Noto Sans JP",sans-serif;margin:0;background:linear-gradient(135deg,#fdf6e3,#fff7e6);min-height:100vh;color:#333;}
+      header{text-align:center;padding:40px 20px;background-color:rgba(255,255,255,0.85);backdrop-filter:blur(8px);}
+      header h1{font-size:2.5em;margin:0;}
+      .gallery{display:flex;justify-content:center;flex-wrap:wrap;gap:15px;padding:30px 10px;}
+      .gallery-item{text-align:center;}
+      .gallery-item a{text-decoration:none;color:inherit;}
+      .gallery-item img{width:300px;height:200px;object-fit:cover;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,0.3);transition:transform 0.3s ease;}
+      .gallery-item img:hover{transform:scale(1.05);}
+      .gallery-item p{margin-top:8px;font-weight:bold;}
+      section{background:white;margin:20px auto;padding:25px;border-radius:16px;width:85%;max-width:900px;box-shadow:0 4px 12px rgba(0,0,0,0.2);}
+      section h2{border-left:5px solid #d4af37;padding-left:10px;}
+      .info-container{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;margin-top:10px;}
+      .info-text{flex:1;min-width:260px;}
+      .info-text a.official-link{display:inline-block;margin-top:6px;color:#b57e00;text-decoration:none;}
+      .info-text a.official-link:hover{text-decoration:underline;}
+      .info-right{text-align:right;min-width:180px;}
+      .rating{font-size:1.2em;color:#fbc02d;margin-bottom:10px;}
+      .map-link{display:inline-block;text-decoration:none;background:#d4af37;color:white;padding:8px 16px;border-radius:8px;transition:background 0.3s;}
+      .map-link:hover{background:#b57e00;}
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <h1>ピラミッド観光ガイド</h1>
+      <p>古代エジプト文明の象徴——ギザの大ピラミッド群を巡る</p>
+    </header>
+
+    <div class="gallery">
+      <div class="gallery-item">
+        <a href="https://www.google.com/maps?q=ギザの大ピラミッド" target="_blank">
+          <img src="https://i.ibb.co/B2y3R45N/pexels-photo-71241.jpg" alt="ギザの大ピラミッド">
+        </a>
+        <p>ギザの大ピラミッド</p>
+      </div>
+      <div class="gallery-item">
+        <a href="https://www.google.com/maps?q=ギザの大スフィンクス" target="_blank">
+          <img src="https://i.ibb.co/wFSsQWGh/pexels-reneterp-2482333.jpg" alt="スフィンクス">
+        </a>
+        <p>スフィンクス</p>
+      </div>
+      <div class="gallery-item">
+        <a href="https://www.google.com/maps?q=メンカウラーのピラミッド" target="_blank">
+          <img src="https://i.ibb.co/fz4Jq8Ky/pexels-diego-ferrari-33201434-13865652.jpg" alt="メンカウラーのピラミッド">
+        </a>
+        <p>メンカウラーのピラミッド</p>
+      </div>
+      <div class="gallery-item">
+        <a href="https://www.google.com/maps?q=ギザの大ピラミッド" target="_blank">
+          <img src="https://i.ibb.co/LDDKkK85/pexels-diego-f-parra-33199-15127207.jpg" alt="夕景のピラミッド">
+        </a>
+        <p>夕景のピラミッド</p>
+      </div>
+    </div>
+
+    <section>
+      <h2>近場のホテル</h2>
+      <div class="info-container">
+        <div class="info-text">
+          <p><strong>Marriott Mena House, Cairo</strong><br>
+          ピラミッドを望む歴史的ホテル。ラグジュアリーな内装と眺望が魅力。<br>
+          <a href="https://www.marriott.com/hotels/travel/caimen-marriott-mena-house-cairo/" target="_blank" class="official-link">🔗 公式サイトを見る</a></p>
+        </div>
+        <div class="info-right">
+          <div class="rating">⭐⭐⭐⭐⭐（4.6 / 5）</div>
+          <a href="https://www.google.com/maps?q=Marriott+Mena+House+Cairo" target="_blank" class="map-link">📍 地図で見る</a>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="info-container">
+        <div class="info-text">
+          <p><strong>Steigenberger Pyramids Cairo</strong><br>
+          近代的な快適ホテル。ピラミッドまで車で簡単アクセス可能。<br>
+          <a href="https://www.steigenberger.com/hotels/all-hotels/egypt/cairo/steigenberger-pyramids-cairo" target="_blank" class="official-link">🔗 公式サイトを見る</a></p>
+        </div>
+        <div class="info-right">
+          <div class="rating">⭐⭐⭐⭐（4.4 / 5）</div>
+          <a href="https://www.google.com/maps?q=Steigenberger+Pyramids+Cairo" target="_blank" class="map-link">📍 地図で見る</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>近場のおいしいレストラン</h2>
+      <div class="info-container">
+        <div class="info-text">
+          <p><strong>139 Restaurant</strong><br>
+          ピラミッドを眺めながらディナーが楽しめる人気レストラン。<br>
+          <a href="https://www.139pyramids.com/" target="_blank" class="official-link">🔗 公式サイトを見る</a></p>
+        </div>
+        <div class="info-right">
+          <div class="rating">⭐⭐⭐⭐（4.1 / 5）</div>
+          <a href="https://www.google.com/maps?q=139+Restaurant+Giza" target="_blank" class="map-link">📍 地図で見る</a>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="info-container">
+        <div class="info-text">
+          <p><strong>Felfela</strong><br>
+          カイロ伝統料理の老舗。リーズナブルで観光客にも人気。<br>
+          <a href="https://www.felfela.com/" target="_blank" class="official-link">🔗 公式サイトを見る</a></p>
+        </div>
+        <div class="info-right">
+          <div class="rating">⭐⭐⭐⭐（3.6 / 5）</div>
+          <a href="https://www.google.com/maps?q=Felfela+Cairo" target="_blank" class="map-link">📍 地図で見る</a>
+        </div>
+      </div>
+    </section>
+
+  </body>
+  </html>

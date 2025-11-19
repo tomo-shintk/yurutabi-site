@@ -1,0 +1,122 @@
+  <!DOCTYPE html>
+  <html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ニューヨーク観光ガイド</title>
+    <style>
+      body {font-family:"Hiragino Sans","Noto Sans JP",sans-serif;margin:0;background:linear-gradient(135deg,#d8f0ff,#ffffff);min-height:100vh;color:#333;}
+      header{text-align:center;padding:40px 20px;background-color:rgba(255,255,255,0.85);backdrop-filter:blur(8px);}
+      header h1{font-size:2.5em;margin:0;}
+      .gallery{display:flex;justify-content:center;flex-wrap:wrap;gap:15px;padding:30px 10px;}
+      .gallery-item{text-align:center;}
+      .gallery-item a{text-decoration:none;color:inherit;}
+      .gallery-item img{width:300px;height:200px;object-fit:cover;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,0.3);transition:transform 0.3s ease;}
+      .gallery-item img:hover{transform:scale(1.05);}
+      .gallery-item p{margin-top:8px;font-weight:bold;}
+      section{background:white;margin:20px auto;padding:25px;border-radius:16px;width:85%;max-width:900px;box-shadow:0 4px 12px rgba(0,0,0,0.2);}
+      section h2{border-left:5px solid #4a90e2;padding-left:10px;}
+      .info-container{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;margin-top:10px;}
+      .info-text{flex:1;min-width:260px;}
+      .info-text a.official-link{display:inline-block;margin-top:6px;color:#005b96;text-decoration:none;}
+      .info-text a.official-link:hover{text-decoration:underline;}
+      .info-right{text-align:right;min-width:180px;}
+      .rating{font-size:1.2em;color:#fbc02d;margin-bottom:10px;}
+      .map-link{display:inline-block;text-decoration:none;background:#4a90e2;color:white;padding:8px 16px;border-radius:8px;transition:background 0.3s;}
+      .map-link:hover{background:#357ab8;}
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <h1>ニューヨーク観光ガイド</h1>
+      <p>摩天楼と文化の融合——世界の大都市を巡る旅</p>
+    </header>
+
+    <div class="gallery">
+      <div class="gallery-item">
+        <a href="https://www.google.com/maps?q=Statue+of+Liberty" target="_blank">
+          <img src="https://i.ibb.co/dsNZPycq/pexels-pixabay-290386.jpg" alt="自由の女神">
+        </a>
+        <p>自由の女神</p>
+      </div>
+      <div class="gallery-item">
+        <a href="https://www.google.com/maps?q=タイムズスクエア" target="_blank">
+          <img src="https://i.ibb.co/dsStDz7s/pexels-leofallflat-1737957.jpg" alt="タイムズスクエア">
+        </a>
+        <p>タイムズスクエア</p>
+      </div>
+      <div class="gallery-item">
+        <a href="https://www.google.com/maps/place/%E3%82%BB%E3%83%B3%E3%83%88%E3%83%A9%E3%83%AB%E3%83%BB%E3%83%91%E3%83%BC%E3%82%AF/@40.7379382,-74.0509072,12.36z/data=!4m6!3m5!1s0x89c2589a018531e3:0xb9df1f7387a94119!8m2!3d40.7825547!4d-73.9655834!16zL20vMDljN3Y?entry=ttu&g_ep=EgoyMDI1MTExMi4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+          <img src="https://i.ibb.co/YTJNszbh/pexels-jill-2062386.jpg" alt="セントラルパーク">
+        </a>
+        <p>セントラルパーク</p>
+      </div>
+      <div class="gallery-item">
+        <a href="https://www.google.com/maps?q=エンパイアステートビル" target="_blank">
+          <img src="https://i.ibb.co/rRgWbg4m/pexels-lkloeppel-466685.jpg" alt="エンパイアステートビル">
+        </a>
+        <p>エンパイアステートビル</p>
+      </div>
+    </div>
+
+    <section>
+      <h2>近場のホテル</h2>
+      <div class="info-container">
+        <div class="info-text">
+          <p><strong>The Plaza Hotel</strong><br>
+          セントラルパーク近くの高級ホテル。歴史あるインテリアと洗練されたサービスが魅力。<br>
+          <a href="https://www.theplazany.com/" target="_blank" class="official-link">🔗 公式サイトを見る</a></p>
+        </div>
+        <div class="info-right">
+          <div class="rating">⭐⭐⭐⭐⭐（4.５ / 5）</div>
+          <a href="https://www.google.com/maps?q=The+Plaza+Hotel+New+York" target="_blank" class="map-link">📍 地図で見る</a>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="info-container">
+        <div class="info-text">
+          <p><strong>Mandarin Oriental, New York</strong><br>
+          コロンバスサークルにある高級ホテル。摩天楼を望むモダンなデザイン。<br>
+          <a href="https://www.mandarinoriental.com/new-york" target="_blank" class="official-link">🔗 公式サイトを見る</a></p>
+        </div>
+        <div class="info-right">
+          <div class="rating">⭐⭐⭐⭐⭐（4.6 / 5）</div>
+          <a href="https://www.google.com/maps?q=Mandarin+Oriental+New+York" target="_blank" class="map-link">📍 地図で見る</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>近場のおいしいレストラン</h2>
+      <div class="info-container">
+        <div class="info-text">
+          <p><strong>Le Bernardin</strong><br>
+          世界的に有名なフレンチレストラン。シーフードが絶品。<br>
+          <a href="https://www.le-bernardin.com/" target="_blank" class="official-link">🔗 公式サイトを見る</a></p>
+        </div>
+        <div class="info-right">
+          <div class="rating">⭐⭐⭐⭐⭐（4.６ / 5）</div>
+          <a href="https://www.google.com/maps?q=Le+Bernardin+New+York" target="_blank" class="map-link">📍 地図で見る</a>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="info-container">
+        <div class="info-text">
+          <p><strong>Katz's Delicatessen</strong><br>
+          ニューヨーク名物パストラミサンドの老舗。カジュアルで地元感あふれる店。<br>
+          <a href="https://www.katzsdelicatessen.com/" target="_blank" class="official-link">🔗 公式サイトを見る</a></p>
+        </div>
+        <div class="info-right">
+          <div class="rating">⭐⭐⭐⭐（4.５ / 5）</div>
+          <a href="https://www.google.com/maps?q=Katz%27s+Delicatessen+New+York" target="_blank" class="map-link">📍 地図で見る</a>
+        </div>
+      </div>
+    </section>
+
+  </body>
+  </html>
