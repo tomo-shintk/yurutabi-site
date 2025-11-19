@@ -44,12 +44,12 @@
     }).addTo(map);
 
     const places = [
-      ["マチュピチュ（ペルー）", -13.1631, -72.5450, "https://i.ibb.co/npLWskb/pexels-photo-2929906.jpg"],
-      ["リオデジャネイロ（ブラジル）", -22.9068, -43.1729, "https://i.ibb.co/dsmwsM86/pexels-photo-9435589.jpg"]
+      ["マチュピチュ（ペルー）", -13.1631, -72.5450, "https://i.ibb.co/npLWskb/pexels-photo-2929906.jpg", "matyupityu.html"],
+      ["リオデジャネイロ（ブラジル）", -22.9068, -43.1729, "https://i.ibb.co/dsmwsM86/pexels-photo-9435589.jpg", "riodejaneiro.html"]
     ];
 
     places.forEach(p => {
-      const link = `https://www.google.com/maps?q=${encodeURIComponent(p[0])}`;
+      const link = `https://tomo-shintk.github.io/yurutabi-site/${p[4]}`;
       L.marker([p[1], p[2]]).addTo(map)
         .bindPopup(`<b>${p[0]}</b><br><a href="${link}" target="_blank"><img src="${p[3]}" class="popup-img"></a>`);
     });
