@@ -18,7 +18,7 @@
       }
       .popup-img {
         width: 240px;
-        aspect-ratio: 16 / 9; /* 16:9統一 */
+        aspect-ratio: 16 / 9; /* 16:9固定 */
         object-fit: cover;
         border-radius: 8px;
         margin-top: 5px;
@@ -44,12 +44,12 @@
     }).addTo(map);
 
     const places = [
-      ["ナイアガラの滝（カナダ・アメリカ）", 43.0896, -79.0849, "https://i.ibb.co/Gv4bpyTg/pexels-photo-306381.jpg"],
-      ["ニューヨーク（アメリカ）", 40.7128, -74.0060, "https://i.ibb.co/JWRL0PqQ/pexels-photo-1239162.jpg"]
+      ["ナイアガラの滝（カナダ・アメリカ）", 43.0896, -79.0849, "https://i.ibb.co/Gv4bpyTg/pexels-photo-306381.jpg", "naiagara.html"],
+      ["ニューヨーク（アメリカ）", 40.7128, -74.0060, "https://i.ibb.co/JWRL0PqQ/pexels-photo-1239162.jpg", "NY.html"]
     ];
 
     places.forEach(p => {
-      const link = `https://www.google.com/maps?q=${encodeURIComponent(p[0])}`;
+      const link = `https://tomo-shintk.github.io/yurutabi-site/${p[4]}`;
       L.marker([p[1], p[2]]).addTo(map)
         .bindPopup(`<b>${p[0]}</b><br><a href="${link}" target="_blank"><img src="${p[3]}" class="popup-img"></a>`);
     });
