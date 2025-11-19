@@ -6,10 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <style>
-      body {
-        margin: 0;
-        background-color: #e6f2ff; /* アジアの穏やかな青系 */
-      }
       #map {
         height: 100vh;
         width: 100%;
@@ -17,8 +13,14 @@
         margin: 0 auto;
       }
       .popup-img {
-        width: 240px;
-        aspect-ratio: 16 / 9; /* 16:9固定 */
+        width: 200px;
+        height: auto;
+        margin-top: 5px;
+        border-radius: 8px;
+      }
+      .popup-img-crop {
+        width: 220px;
+        height: 130px;
         object-fit: cover;
         border-radius: 8px;
         margin-top: 5px;
@@ -26,16 +28,20 @@
     </style>
   </head>
   <body>
+
   <div id="map"></div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script>
     const map = L.map('map', {
-      center: [20, 100],
+      center: [20.0, 105.0],  // アジアの中心
       zoom: 4,
       minZoom: 3,
       maxZoom: 8,
-      maxBounds: [[-10, 50], [55, 150]],
+      maxBounds: [
+        [-10.0, 50.0],  // 南西（ややゆるく）
+        [55.0, 150.0]   // 北東
+      ],
       maxBoundsViscosity: 1.0
     });
 
@@ -44,15 +50,22 @@
     }).addTo(map);
 
     const places = [
-      ["京都（日本）", 35.0116, 135.7681, "https://i.ibb.co/wF217SVx/pexels-photo-10618962.jpg"],
-      ["バンコク（タイ）", 13.7563, 100.5018, "https://i.ibb.co/jP7YT8Zf/pexels-photo-1374377.jpg"]
+      ["京都（日本）", 35.0116, 135.7681, "https://i.ibb.co/wF217SVx/pexels-photo-10618962.jpg", "normal", "kyoto.html"],
+      ["バンコク（タイ）", 13.7563, 100.5018, "https://i.ibb.co/jP7YT8Zf/pexels-photo-1374377.jpg", "normal", "tai.html"]
     ];
 
-    places.forEach(p => {
-      const link = `https://www.google.com/maps?q=${encodeURIComponent(p[0])}`;
-      L.marker([p[1], p[2]]).addTo(map)
-        .bindPopup(`<b>${p[0]}</b><br><a href="${link}" target="_blank"><img src="${p[3]}" class="popup-img"></a>`);
+    places.forEach(place => {
+      const imgClass = place[4] === "crop" ? "popup-img-crop" : "popup-img";
+      L.marker([place[1], place[2]])
+        .addTo(map)
+        .bindPopup(`
+          <b>${place[0]}</b><br>
+          <a href="https://tomo-shintk.github.io/yurutabi-site/${place[5]}" target="_blank">
+            <img src="${place[3]}" class="${imgClass}">
+          </a>
+        `);
     });
   </script>
+
   </body>
   </html>
